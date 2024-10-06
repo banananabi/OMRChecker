@@ -40,6 +40,16 @@ FIELD_TYPES = {
     #
     # You can create and append custom field types here-
     #
+	"QTYPE_INT_hz": {
+        "bubbleValues": ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"],
+        "direction": "horizontal",
+    },
+    "QTYPE_INT_FROM_1_hz": {
+        "bubbleValues": ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"],
+        "direction": "horizontal",
+    }
+	
+	
 }
 
 # TODO: move to interaction.py

@@ -22,7 +22,11 @@ class ImageUtils:
     @staticmethod
     def save_img(path, final_marked):
         logger.info(f"Saving Image to '{path}'")
-        cv2.imwrite(path, final_marked)
+        try:
+          cv2.imwrite(path, final_marked)
+        except:
+          print(f"Unexpected {err=}, {type(err)=}")
+
 
     @staticmethod
     def resize_util(img, u_width, u_height=None):

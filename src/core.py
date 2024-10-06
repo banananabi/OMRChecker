@@ -375,7 +375,7 @@ class ImageInstanceOps:
                 final_marked, alpha, transp_layer, 1 - alpha, 0, final_marked
             )
             # Box types
-            if config.outputs.show_image_level >= 6:
+            if config.outputs.show_image_level >= 5:
                 # plt.draw()
                 f, axes = plt.subplots(len(all_c_box_vals), sharey=True)
                 f.canvas.manager.set_window_title(name)
@@ -714,7 +714,7 @@ class ImageInstanceOps:
                     int(config.dimensions.display_width * 2.5),
                 ),
             )
-            ImageUtils.save_img(f"{save_dir}stack/{name}_{str(key)}_stack.jpg", result)
+            ImageUtils.save_img(f"{save_dir}/stack/{name}_{str(key)}_stack.jpg", result) #MS added / btw save_dir and stack...
 
     def reset_all_save_img(self):
         for i in range(self.save_image_level):
